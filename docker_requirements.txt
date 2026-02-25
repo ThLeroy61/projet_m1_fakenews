@@ -1,0 +1,11 @@
+pymongo
+python-dotenv
+requests
+kedro
+kedro-airflow
+kedro-datasets
+psycopg2-binary
+scikit-learn
+joblib
+streamlit
+pandas

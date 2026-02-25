@@ -1,0 +1,13 @@
+mongo_posts:
+  type: kedro_clean.extras.datasets.mongo_dataset.MongoDataset
+  uri: "mongodb+srv://ThLeroy35:eTo8ZhKltmQIb0Ei@bluesky.sx2wonq.mongodb.net/?retryWrites=true&w=majority"
+  database: "stagging_bluesky"
+  collection: "raw_data"
+
+postgres_posts:
+  type: kedro_datasets.pandas.SQLTableDataset
+  table_name: bluesky_posts_clean
+  credentials: postgres_creds
+  save_args:
+    if_exists: append
+    index: false
